@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.qianfeng.zhouyi.webviewlesson.MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:singleLine="true"
+        android:background="@drawable/edittextbg"
+        android:inputType="textUri"
+        android:id="@+id/edtUrl"/>
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:background="@drawable/go"
+        android:visibility="gone"
+        android:onClick="onOpenUrl"
+        android:id="@+id/imbGo"
+        android:layout_alignRight="@id/edtUrl"/>
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_below="@id/edtUrl"
+        android:visibility="invisible"
+        android:id="@+id/progresbar"/>
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webviewTest"
+        android:layout_below="@id/progresbar"/>
+
+</RelativeLayout>
